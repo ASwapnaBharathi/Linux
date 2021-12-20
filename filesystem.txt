@@ -1,0 +1,29 @@
+                                                     LINUX FILE SYSTEM
+                                                    
+Linux File system:
+Linux file system is generally a built-in-layer of a LINUX OPERATING SYSTEM used to handle the data management of
+storage.It manages the file name,file size,creation date and much more information about a file
+
+TYPES OF LINUX FILE SYSTEM:
+1.ext3
+2.ext4
+3.XFS
+4.NTFS
+5.FAT
+
+1.ext3:-
+ext3. or third extended file system,is a journaled file system that is commonly used by the Linux Kernel.It is used 
+to be the default file system for many popular Linux Distributions.
+2.ext4:-
+The ext4.filesystem primarily improves performanc,reliabilty and capacity.To improve reliability,meta data and journal
+checksums.
+3.XFS:-
+XFS is a high performance 64 bit journaling file system created by silicon graphics.Inc in 1993.It was the default 
+file system in SGI's IRIX operating system starting with its version 5.3.
+4.NTFS:-
+In Linux,you're more likely to encounter NFTS on a Windows boot partition in a dual-boot configuration.Linux can 
+reliably NFTS and can overwrite existing files,but can't write new files to an NFTS partition.NFTS supports filenames of 
+up to 255 characters,file sizes of up to 16 EB and file systems of up to 16EB.
+5.FAT:-
+FAT fullform is File Allocation Table file system format,these are commonly known by the names used in the mount command to 
+invoke particular drivers in the Kernel:msdos,vfat and umsdos                                                    
