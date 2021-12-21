@@ -1,0 +1,328 @@
+                                        	
+
+mkdir swapna
+cd swapna
+pwd //path
+touch day5.txt
+echo "Interaction class with Navaneethan sir" >day5.txt
+cat day5.txt
+Interaction class with Navaneethan sir
+ls -l day5.txt
+su // to change group first we have to change to root user
+password:
+whoami //confirmation for user
+chown root day5.txt
+ls -l //
+clear //linux cmd for clearing screen
+ls -l day5.txt
+chown user_name:modified_name_of user day5.txt
+
+
+
+mkdir swapna
+cd swapna
+touch class1 class2
+vi class1 
+
+
+--->editor 
+
+
+esc for insertion mode ----->welcome to world of programming
+to quit enter shift+zz
+
+
+---->to cmd line
+
+cat class1
+welcome to world of programming
+
+vi class2
+
+--->editor 
+
+esc for insertion mode ----->welcome to world of programming with ur frnds
+to quit enter shift+zz
+
+to cmd line
+cat class2
+welcome to world of programming with ur frnds
+
+ls -l
+//to change ownership
+ chown -R swapna:swapna ASB //-R for recursively 
+ls -l
+
+help commands
+*************
+whatis
+******
+ whatis
+whatis what
+whatis pwd
+pwd(1)
+whatis touch
+touch(1)
+
+
+cd --help
+ls --help //help for commands
+
+pwd --help//help for commands in pwd help
+
+man command
+***********
+man touch//manual command touch
+man echo//manual command for echo
+
+Creating and Copying commands
+*****************************
+
+
+touch file1
+vi file1
+
+editor
+
+Emerging technology
+Artificial brain
+Robotics
+Cloud computing
+Internet of things
+Edge computing
+Quantum computing
+5G
+Cybersecurity
+Blockchain
+
+enter--->esc : w q
+
+cmd line
+
+cut command:
+***********
+cat file1
+Emerging technology
+Artificial brain
+Robotics
+Cloud computing
+Internet of things
+Edge computing
+Quantum computing
+5G
+Cyber security
+Blockchain
+cut -c1 file1//to get first character of every word
+cut -c1-2 file1// to get first two characters of every word
+control+d to come back
+cut -c1-5 file1 //to get first 5 characters
+
+column words// use $n (how many columns to be displayed,n for cloumn number)
+************
+awk '{print $1}' file name //to display first word/column
+Emerging
+Artificial
+Robotics
+Cloud
+Internet
+Edge
+Quantum
+5G
+Cyber
+Blockchain
+
+awk '{print $1}' file name > contents //redirecting to contents file
+
+cat contents
+Emerging technology
+Artificial brain
+Robotics
+Cloud computing
+Internet of things
+Edge computing
+Quantum computing
+5G
+Cybersecurity
+Blockchain
+							
+cat contents | awk '{print $2}' //to display characters of file "contents" 
+
+grep command(searching)
+***********************
+It is case senstive.
+
+grep search_name file_name
+
+grep Edge file1
+Edge computing
+
+grep computing
+
+Cloud computing
+Edge computing
+Quantum computing
+
+uniq command//it won't allow any duplicate enteries
+************
+vi file2
+ 
+editor
+
+Emerging technology
+Artificial brain
+Robotics
+Cloud computing
+Internet of things
+Edge computing
+Quantum computing
+5G
+Cyber security
+Block chain
+
+//sorting
+
+cat file2 | sort | uniq //
+
+
+wc(word command)//
+****************
+wc file2
+10 23 103 file2 //10-no. lines/23-no.of words/103 -no.of characters/filename
+
+cat file2 | wc -l | 13 //
+
+cd /etc
+many no.of files.............
+
+ls -l | wc -l
+263 //approx value
+ls -l > file_name
+su user_name
+ls -l > file_name
+
+system information:
+******************
+
+uname  command //machine name
+*****************
+uname -a //displays all the details of the machine
+
+dmicode(device management) cmd
+*******************************
+dmidecode // when cmd won't work ,switch user by cmd su command
+dmidecode // all the information of machine is displayed
+
+dmidecode | more //first page content is displayed
+
+hostname
+
+*************************************************************************************************
+to exit from current user 
+
+exit//cmd is used for exiting for previous  username
+
+1.useradd
+2.usermod
+3.userdell
+4.groupadd
+5.groupdell
+
+/etc/password
+/etc/group
+/etc/shadow
+ 
+
+cat /etc/password
+lots of files and data.........
+
+cat /etc/shadow
+whenever permission is denied switch to user
+
+to create new user
+******************
+exit //to go for username
+useradd swapna
+permission denied//because only root user can change user
+su 
+password://diaplayed when command is run
+useradd swapna
+cat /etc/password
+many files are appeared............
+
+to delete the created user name
+*******************************
+cd /etc
+id swapna
+git --version
+
+su swapna
+cd
+pwd
+cd Desktop
+pwd
+vi Dockerfiles
+
+editor
+
+FROM ubuntu
+
+RUN echo "swapna"
+
+CMD ["pwd"] 
+
+shift+zz (command to save and exit)
+
+cmd line
+
+cat Dockerfiles
+FROM ubuntu
+
+RUN echo "swapna"
+
+CMD ["pwd"] 
+
+userdel swapna
+permission denied
+su
+password://when su is runned
+userdel swapna //permission given/accessed
+
+to verify whether it is deleted or not
+**************************************
+su swapna
+groupadd thinkbig //to add group
+cat /etc/group
+//now to delete group//
+groupdel thinkbig
+to verify
+cat /etc/group
+
+usermod:
+********
+
+usermod -G previous_username changed_user_name//to modify the user
+Ex:
+usermod -G thinkbig think //changed from thinkbig to think
+
+to create another container:
+*******************************
+docker build -t myimage . //sends all the information and creates myimage.
+error:gcloud crashed error mean email might be different
+to resolve 
+enter docker login
+username and password are visible,enter them
+
+GOOGLE CLOUD PLATFORM
+***********************
+---->VM instances
+---->new VM instances
+----->machine recognisation 
+----->boot disk
+
+*************************************
+
+
+
+
+
+
