@@ -1,0 +1,33 @@
+Vi Editor commands:-
+
+Vi command has two modes:
+1.Insert mode
+2.Command mode
+
+
+esc - to change mode 
+esc:wq -to save and quit 
+esc:q - can exiting without saving
+c:q! - to write something
+u -undo your last change
+U - undo all changes to the entire line
+O - open a new line
+D -delte contents of line after the cursor
+C -delete contents of the file after the cursor and insert new text
+5dd-last four lines are deleted 
+dw -delete words
+cw - change word
+x -delete the character at the cursor
+r -replace characters
+shift+zz - save the file and quit
+:wq  -Save and quit
+:w   -Save
+:q   -Quit
+:w fname -Save as fname
+i   -Start typing before the current character
+I   -Start typing at the start of current line
+a   -Start typing after the current character
+A   -Start typing at the end of current line
+o   -Start typing on a new line after the current line
+O   -Start typing on a new line before the current line\
+dg -delete all the fils

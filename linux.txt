@@ -1,0 +1,280 @@
+BASICS AND ADVANCED LINUX ADMINSTRATION:
+***************************************
+OPERATING SYSTEM:
+Interface b/w user and hardware
+USER------OS---------HARDWARE
+
+
+LINUX OPERATING SYSTEM:
+USER------OS------KERNEL--------HARDWARE
+
+no operating system:
+computer can't work
+
+everyone prefers prebuild os
+
+with help of os we can interact with machine
+
+
+*****************
+VIRTUAL BOX:
+
+free,open source and called hypervisor for X86 computers -orcale corp
+
+it can hold different types of os - win/macos/linus
+it extends the capability of our os
+
+************
+CHANGING PASSWORD:
+
+FOR LINUX
+        passwd userid
+
+open terminal
+enter pwd
+next whoami             first slash represents root
+enter passwd
+changing password for (username is displayed defaultly)
+it will ask for current password :
+it will ask for new password:
+it displays password is successfully updated
+
+
+
+or
+
+open terminal
+passwd username
+enter passwd
+changing password for (username is displayed defaultly)        if you dont wnt to change password from this step just press ctrl d
+it will ask for current password :
+it will ask for new password:
+it displays password is successfully updated
+
+
+****************************
+linux commands
+
+clear-to clear screen
+cd- to change directory
+su - -to switch user
+passwd- to change password
+pwd-to know in which directory you are
+cd /-to go back to the parent directory
+ls-listing all the contents in directory
+ls -l-to list everything in columns
+touch -to create files in directories
+ls -a- display all the files icluding hidden files
+ls * -lists all the sub files/folders also
+ls -R-lists all the sub folders recursively
+ls -ls -lists all the folders with size
+ls -s -soft link
+ls -lh - list in human readable format
+ls -lhr -to reverse the order of list
+ls -lt -to run files according to time we modified
+ls -ltr -to run files according to time we modified are displayed in reverse format
+grep - to search any folder
+| - used to connect to connect two commands
+cat - used to read the contents only in files not directories and it prints them
+echo - store the text in some file and similar to print statement
+chmod - modify the permissions
+ls -li-list the file with index
+ln - to link files
+chgrp -change group 
+mkdir -create directory
+rmdir -remove directory
+whoami - displays user name
+/ -root
+
+
+
+
+
+**************************
+to change user name
+
+
+enter su-
+enter the name that u want name
+
+******************************
+os basically stores data on disk drives
+disk drives are created by file system(it stores the in hierarchy of dictories and files)
+ 
+TYPES OF FILE SYSTEM(IT COMES INSTALLED WITH THE OS)
+
+ext3
+ext4
+XFS
+NTFS
+FAT
+***************************
+/ mean root ,it is a directory path
+
+we have predefined folders in linux like bin,boot,dev,usr,etc,home,opt,root,svr,tmp,lib,media,....
+***********************
+how to navigate into files
+
+enter pwd
+"it prints the current directory where you are"
+enter cd /home (or) cd space is also enough
+
+
+
+*******************
+skyblue color-represents links
+darkblue color-rpresents files
+green color-executable files
+****************************
+to create files
+
+mkdir /ashoka
+enter pwd
+your in ashoka folder
+enter touch file1.txt
+"file is created"
+*******************
+to access file
+
+ls -l swapna
+"it displays only files regarding swapna file"
+ls -l | grep swapna // |- used to connect two command lines//
+"gives only results regarding swapna"
+
+*****************
+-rw-rw-r--  mean it talks about permissions
+
+it is splitted into  four parts
+-  file 
+rw- u:(user permission) only read and write permissions  are accessed // we can read and write the file//
+rw- g:(group permission)only read and write permissions  are accessed
+r-- a:(all other permissions) only read operation is mentioned
+   
+
+d - directory
+l - link
+x - executable file
+*********************
+ls -l swapna.txt
+echo "this is swapna" >>swapna.txt
+cat swapna.txt
+"prints this is swapna"
+chmod u-r swapna.txt // '-' represents removing the read permission to the user
+ls -l swapna.txt
+cat swapna.txt
+"access is denied is displayed"
+chmod u+r swapna.txt // '+' represents adding the read permission to the user
+cat swapna.txt
+"access is given ,so that u can read the data in swapna.txt"
+chmod g-r swapna.txt // '-' represents removing the read permission other than group
+chmod g+r swapna.txt // '-' represents adding the read permission to the group
+chmod o-r swapna.txt // '-' represents no one can read the files
+chmod o+r swapna.txt // '+' represents anyone can read the files
+ls -la // for hidden files
+cd swapna //go to swapna file
+ls -l //list out the fils in swapna //verifying
+chmod u-x swapna //not allowed to access swapna file
+cat swapna
+"acces denied"
+chmod u+x swapna//permission is granted to access the file
+****************
+cd desktop
+ls
+touch swpana.png
+vi swapna.png
+cat swapna.png
+./swapna.png
+"access is denied"
+***********************
+to create link
+
+
+cat asb.txt
+"some content is displayed"
+ln asb.txt swapna.txt //swapna.txt is linked to asb.txt
+ls -l
+"now swapna.txt is also displayed in the list"
+cat asb.txt
+"some content is displayed"
+cat swapna.txt
+"content in asb.txt is displayed"
+vi asb.txt //enter some data
+cat asb.txt
+"the new data u entered is displayed"
+cat swapna.txt
+"changes in asb.txt is also displayed"
+****************
+1 COLUMN:
+
+permissions like read(r),write(w),execute(x)
+****************
+2 COLUMN :
+
+2 column displays hard links //simply no. of links
+*******************
+3 COLUMN:
+
+3 column displays user name
+*********************
+4 COLUMN:
+
+4 column specifies group name
+
+chgrp brand swapna
+***********
+5 COLUMN:
+
+size is displayed
+*****************
+6,7,8 COLUMNS:
+ 
+displays month,date,year
+***********************
+9 COLUMN:
+
+displays time
+******************
+10 COLUMN:
+ displays file name
+*****************
+ln -l asb.txt swapna.txt
+"gives what link is present b/w asb.txt & swapna.txt,whether it is soft lin or hard link"
+***************************
+to push /update any value 
+
+cat asb
+echo "be confident" > asb
+cat asb
+be confident
+echo "be smart" > asb
+cat asb
+be smart//now it erased be confident,so it means with one grater than symbol (>) it erases the data and stores the new data
+echo "think big" >>asb
+be smart
+think big // now both the statements are printed or stored into asb with  double greater than symbol (>>)
+**************************
+rm *.txt //removes all .txt files
+rm -r asb//removes the directory asb
+rm -rf asb//it forcfully removes the directory asb
+******************************
+copy command
+
+cp asb swapna//copies all the content from asb and pastes in swapna
+cat swapna
+"all the data is copied from asb"
+******************************
+move commnd
+
+mv asb asbpro
+mv asbpro /tmp
+cd /tmp 
+************************
+ls -l | more       //it only displays first page,to diplay remaining press enter,if you want to quit press 'q'
+ls -l | tail -1   //displays last line of the list 
+ls -l | head     //displays top lines
+ls -l | head -5 //displays top 5 lines
+
+
+
+
+
